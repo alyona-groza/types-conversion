@@ -1,0 +1,266 @@
+import java.io.UnsupportedEncodingException;
+
+public class Convert {
+    public static void main(String[] args) {
+        //String to byte с использованием конструктора:
+        try {
+            Byte b1 = new Byte("10");
+            System.out.println(b1);
+        }
+        catch (NumberFormatException e) {
+            System.err.println("Неверный формат строки!");
+        }
+        //с использованием метода valueOf класса Byte:
+        String str1 = "111";
+        try {
+            Byte b2 = Byte.valueOf(str1);
+            System.out.println(b2);
+        }
+        catch (NumberFormatException e) {
+            System.err.println("Неверный формат строки!");
+        }
+        //с использованием метода parseByte класса Byte:
+        byte b = 0;
+        String str2 = "100";
+        try {
+            b = Byte.parseByte(str2);
+            System.out.println(b);
+        }
+        catch (NumberFormatException e) {
+            System.err.println("Неверный формат строки!");
+        }
+        //перевод строки в массив байтов и обратно:
+        String str3 = "20150";
+        byte[] b3 = str3.getBytes();
+        System.out.println(b3);
+            //массив переводим обратно в строку:
+        try {
+            String s = new String(b3, "cp1251");
+            System.out.println(s);
+        }
+        catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+        //String to short с использованием конструктора:
+        try {
+            Short s1 = new Short("68");
+            System.out.println(s1);
+        }
+        catch (NumberFormatException e) {
+            System.err.println("Неверный формат строки!");
+        }
+        //с использованием метода valueOf класса Short:
+        String str4 = "59";
+        try {
+            Short s2 = Short.valueOf(str4);
+            System.out.println(s2);
+        }
+        catch (NumberFormatException e) {
+            System.err.println("Неверный формат строки!");
+        }
+        //с использованием метода parseShort класса Short:
+        short s3 = 0;
+        String str5 = "100";
+        try {
+            s3 = Short.parseShort(str5);
+            System.out.println(s3);
+        }
+        catch (NumberFormatException e) {
+            System.out.println("Неверный формат строки");
+        }
+        //String to int c использованием конструктора:
+        try {
+            Integer i1 = new Integer("20485");
+            System.out.println(i1);
+        }
+        catch (NumberFormatException e) {
+            System.err.println("Not right String format");
+        }
+        //с использованием метода valueOf класса Integer:
+        String str6 = "374";
+        try {
+            Integer i2 = Integer.valueOf(str6);
+            System.out.println(i2);
+        }
+        catch (NumberFormatException e) {
+            System.err.println("Not right String format");
+        }
+        //с использованием метода parseInt класса Integer:
+        int i3 = 0;
+        String str7 = "484652";
+        try {
+            i3 = Integer.parseInt(str7);
+            System.out.println(i3);
+        }
+        catch (NumberFormatException e) {
+            System.err.println("Not right String format");
+        }
+        //String to long с использованием конструктора:
+        try {
+            long l1 = new Long("223434211");
+            System.out.println(l1);
+        }
+        catch (NumberFormatException e) {
+            System.err.println("Not right String format");
+        }
+        //с использованием метода valueOf класса Long:
+        String str8 = "57575784";
+        try {
+            Long l2 = Long.valueOf(str8);
+            System.out.print(l2);
+        }
+        catch (NumberFormatException e) {
+            System.err.println("Not right String format");
+        }
+        //с использованием метода parseLong класса Long:
+        long l3 = 0;
+        String str9 = "4037422";
+        try {
+            l3 = Long.parseLong(str9);
+            System.out.println(l3);
+        }
+        catch (NumberFormatException e) {
+            System.err.println("Not right String format");
+        }
+        //String to float с использованием конструктора:
+        try {
+            Float f1 = new Float("643.3");
+            System.out.println(f1);
+        }
+        catch (NumberFormatException e) {
+            System.err.println("Not right String format");
+        }
+        //с использованием метода valueOf класса Float:
+        String str10 = "3.224";
+        try {
+            Float f2 = Float.valueOf(str10);
+            System.out.println(f2);
+        }
+        catch (NumberFormatException e) {
+            System.err.println("Not right String format");
+        }
+        //с использованием метода parseFloat класса float:
+        float f3 = 0;
+        String str11 = "36.4";
+        try {
+            f3 = Float.parseFloat(str11);
+            System.out.println(f3);
+        }
+        catch (NumberFormatException e) {
+            System.err.println("Not right String format");
+        }
+        //String to double с использованием конструктора:
+        try {
+            Double d1 = new Double("4.4e10");
+            System.out.println(d1);
+        }
+        catch (NumberFormatException e) {
+            System.err.println("Not right String format");
+        }
+        //с использованием метода valueOf класса Double:
+        String str12 = "563.3e10";
+        try {
+            Double d2 = Double.valueOf(str12);
+            System.out.println(d2);
+        }
+        catch (NumberFormatException e) {
+            System.err.println("Not right String format");
+        }
+        //с использованием метода parseDouble класса Double:
+        double d3 = 0;
+        String str13 = "13.4e10";
+        try {
+            d3 = Double.parseDouble(str13);
+            System.out.println(d3);
+        }
+        catch (NumberFormatException e) {
+            System.err.println("Not right String format");
+        }
+        //String to boolean:
+        String s5 = "True";
+        String s6 = "Yes";
+        boolean bool1, bool2, boolean1, boolean2;
+
+        //используя метод parseBoolean:
+        bool1 = Boolean.parseBoolean(s5);
+        bool2 = Boolean.parseBoolean(s6);
+        System.out.println( bool1 );
+        System.out.println( bool2 );
+
+        //используя метода valueOf:
+        boolean1 = Boolean.valueOf(s5);
+        boolean2 = Boolean.valueOf(s6);
+        System.out.println( boolean1 );
+        System.out.println( boolean2 );
+
+        //int to String:
+        int i = 45;
+        String str14 = Integer.toString(i);
+        System.out.println(str14);
+
+        //double to String
+        double d5 = 33.3e10;
+        String str15 = Double.toString(d5);
+        System.out.println(str15);
+
+        //long to String
+        long l5 = 4836995;
+        String str16 = Long.toString(l5);
+        System.out.println(str16);
+
+        //float to String
+        float f5 = 3.57f;
+        String str17 = Float.toString(f5);
+        System.out.println(str17);
+
+        //char to String
+        char ch = 'S';
+
+        //с использованием класса Character
+        String charToString = Character.toString(ch);
+        System.out.println(charToString);
+
+        //с использованием операции добавления класса String
+        String str18 = "" + ch;
+        System.out.println(str18);
+
+        //с использлванием массива
+        String fromChar = new String(new char[] { ch });
+        System.out.println(fromChar);
+
+        //с использованием метода valueOf класса String
+        String valueOfchar = String.valueOf(ch);
+        System.out.print(valueOfchar);
+
+        //char to int
+        char ch5 = '9';
+
+        //используя метод getNumericValue класса Charachter
+        int i5 = Character.getNumericValue(ch5);
+        System.out.println(i5);
+
+        //используя метод digit класса Character
+        int i6 = Character.digit(ch5,10);
+        System.out.println(i6);
+
+        //int to long
+        int i7 = 3042;
+        long l6 = (long) (i7);
+        System.out.print(l6);
+
+        //int to float
+        int i8 = 3485;
+        float f7 = (float) (i8);
+        System.out.println(f7);
+
+        //long to int
+        long l7 = 3927293;
+        int i9 = (int) l7;
+        System.out.println(i9);
+
+        //double to int
+        double d7 = 3.23;
+        int i10 = (int) d7;
+        System.out.println(i10);
+    }
+}
